@@ -19,7 +19,6 @@ class Ejercicio2Test {
  		"user,passwordincorrect,false",
 		"usuario,pass,false"
 	})
-	
 	@ParameterizedTest(name = "{index} => Con usuario ({0}) y password ({1}) sale {2}")
 	void testLogin_parametrized(String username, String password, String result) {
 		// Arrange

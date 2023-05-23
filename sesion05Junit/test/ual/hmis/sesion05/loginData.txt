@@ -1,0 +1,4 @@
+pass, password demasiado corto
+password, ********
+password123456, ************
+passwordpasswordpasswordpasswordpassword1, password demasiado largo
