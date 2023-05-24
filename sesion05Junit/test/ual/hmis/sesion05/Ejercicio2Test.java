@@ -8,7 +8,11 @@ import org.junit.jupiter.params.provider.CsvSource;
 class Ejercicio2Test {
 
 	@CsvSource({
-		"user,pass,true",
+		"user,Pass1,true",
+		"OtroUser, Pass1, false",
+		"user,pass1,false",
+		"user,PASS1,false",
+		"user,Pass,false",
 		"'',pass,false",
 		"user,'',false",
 		"nombredeusuariossuperlagruisimomayorde30caraceteres,pass,false",

@@ -7,7 +7,7 @@ public class TestDiagonales {
         int[][] diagonales = new int[2][n];
         for (int i=0; i<n; i++){
             diagonales[0][i] = matriz[i][i];
-            diagonales[1][i] = matriz[n-1-i][n-1-i];
+            diagonales[1][i] = matriz[i][n-1-i];
         }
         return diagonales;
     }

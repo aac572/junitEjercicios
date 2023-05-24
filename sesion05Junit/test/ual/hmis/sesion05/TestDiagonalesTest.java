@@ -11,7 +11,7 @@ public class TestDiagonalesTest {
     @MethodSource("matricesEnteras")
     public void obtenerDiagonales_matrizCuadrada(int[][] matriz) {
         new TestDiagonales();
-        assertThrows(RuntimeException.class, ()->   TestDiagonales.obtenerDiagonales(new int[][]{{1,2,3},{1,2}}), "La matriz introducida no es cuadrada");
+        assertThrows(RuntimeException.class, ()->   TestDiagonales.obtenerDiagonales(new int[][]{{1,2,3},{1,2,3}}), "La matriz introducida no es cuadrada");
         int[][] diagonales = TestDiagonales.obtenerDiagonales(matriz);
         int n = matriz.length;
 
@@ -20,7 +20,7 @@ public class TestDiagonalesTest {
 
         for (int i = 0; i < n; i++) {
             assertEquals(matriz[i][i], diagonales[0][i]);
-            assertEquals(matriz[n - 1 - i][n - 1 - i], diagonales[1][i]);
+            assertEquals(matriz[i][n - 1 - i], diagonales[1][i]);
         }
     }
 
